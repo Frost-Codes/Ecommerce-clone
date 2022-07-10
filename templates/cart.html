@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Cart</title>
+{% endblock %}
+
+{% block body %}
+
+{% if items | length <1 %}
+<h2 style="margin-left:50px;">Your Cart is empty</h2>
+{% else %}
+<div id="table" style="margin-left:50px;">
+    <h2>Shopping items</h2>
+    <table style="margin-top:20px;" border="1" cellpadding="10" cellspacing="0" width="500" >
+
+
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{item.item_name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.quantity}}</td>
+            <td>
+                <a href="/updatecart/{{item.id}}">Update</a>
+                <br>
+                <a href="/remove/{{item.id}}">Remove Item</a>
+            </td>
+        </tr>
+
+        {% endfor %}
+        <tr>
+            <td>Total</td>
+            <td>{{total}}</td>
+            <td>{{quantity_total}}</td>
+            <td><a href="/payment">Check out</a></td>
+        </tr>
+    </table>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Manager</title>
+{% endblock %}
+
+{% block body %}
+
+{% if items | length <1 %}
+<h2 style="margin-left:50px;">Add shop items below</h2>
+{% else %}
+<div id="table" style="margin-left:50px;">
+    <h2>Shop items</h2>
+    <table border="1" cellpadding="10" cellspacing="0" width="500" style="margin-top:20px;" >
+        <tr>
+            <th>Name</th>
+            <th>Current_price</th>
+            <th>Previous_price</th>
+            <th>Remaining stock</th>
+            <th>Action</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.current_price}}</td>
+            <td>{{item.previous_price}}</td>
+            <td>{{item.remaining}}</td>
+            <td>
+                <a href="/update/{{item.id}}">Update</a>
+                <br>
+                <a href="/delete/{{item.id}}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endif %}
+<div id="form" style="margin-left:50px; margin-top:10px;">
+    <form method="POST">
+
+
+        <input type="text" name="name" id="name" placeholder="Name of item" required>
+        <input type="number" name="current_price" id="current_price" placeholder="Current_price" required>
+        <input type="number" name="previous_price" id="previous_price" placeholder="Previous_price"required>
+        <input type="number" name="remaining" id="remaining" placeholder="Remaining stock" required>
+        <input type="submit" value="Add item">
+    </form>
+
+</div>
+{% endblock %}

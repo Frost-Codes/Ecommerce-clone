@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Update</title>
+{% endblock %}
+
+{% block body %}
+
+<div id="update" style="margin-left:50px;">
+  <h2 style="margin-top:10px;">Update Quantity</h2>
+  <form method="POST" style="margin-top:20px;">
+    {{form.hidden_tag()}}
+    {{form.quantity()}}
+    {{form.update_cart()}}
+
+  </form>
+</div>
+
+{% endblock %}

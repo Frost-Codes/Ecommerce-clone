@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+ .top{
+    background:rgb(124, 14, 151);
+    height: 100px;
+}
+.top .navbar{
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0%;
+}
+.top .navbar .name .logo .logo-content{
+    display: flex;
+    color: #000;
+    margin-left: 60px;
+}
+.top .navbar .name .logo .logo-content i{
+    font-weight: 600;
+    font-size: 30px;
+    color: orange;
+    margin-top: 5px;
+}
+.top .navbar .name .logo .logo-content .logo-name p{
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+.top .navbar .search .item{
+    width: 600px;
+    height: 35px;
+    font-size: 15px;
+}
+.top .navbar .search .submit{
+    width: 80px;
+    height: 40px;
+    background: orange;
+    border: 2px solid orange;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+.top .navbar .search .submit:hover{
+    background: rgb(228, 150, 7);
+    border: 2px solid rgb(228, 150, 7);
+}
+.top .navbar .content{
+    display: flex;
+    margin-right: 10px;
+
+}
+.top .navbar .content .account a,  .top .navbar .content .help a,  .top .navbar .content .cart a{
+    display: flex;
+    text-decoration: none;
+    padding: 5 20px;
+    
+}
+.top .navbar .content .account:hover p,  .top .navbar .content .help:hover p,  .top .navbar .content .cart:hover p{
+    color: orange;
+}
+
+
+.top .navbar .content .account i,  .top .navbar .content .help i,  .top .navbar .content .cart i{
+    margin-right: 5px;
+    font-size: 25px;
+    color: rgb(117, 116, 116);
+    transition: all 0.3s ease;
+}
+
+
+
+.top .navbar .content .account p,  .top .navbar .content .help p,  .top .navbar .content .cart p{
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:rgb(117, 116, 116);
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+.top .navbar .content .account:hover i,  .top .navbar .content .help:hover i,  .top .navbar .content .cart:hover i{
+    color: orange;
+}
+
+.dropdown li:hover{
+    background: rgb(117, 116, 116);
+}
+.top .navbar .content .account a:hover > .dropdown li{
+    display: block;
+}
+
+/* first styling start */
+.first{
+    background: rgb(124, 14, 151);
+    /* align-items: center; */
+    height: 1000px;
+    
+}
+.first-content{
+    display: flex;
+
+}
+
+.first .first-content .left .left-content{
+    
+    width: 200px;
+    height: 400px;
+    margin-left: 50px;
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+}
+.first .first-content .left .left-content .left-list li{
+    list-style: none;
+    margin-top: 13px;
+    margin-left: -23px;
+
+}
+
+.first .first-content .left .left-content .left-list li a{
+    text-decoration: none;  
+}
+.first .first-content .left .left-content .left-list i{
+    color: rgb(117, 116, 116);
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+.first .first-content .left .left-content .left-list li:hover i{
+    color: orange;
+}
+.first .first-content .left .left-content .left-list span{
+   color: rgb(117, 116, 116);
+   transition: all 0.3s ease;
+}
+.first .first-content .left .left-content .left-list li:hover span{
+    color: orange;
+}
+
+.first .first-content .center .center-content{
+    width: 750px;
+    height: 400px;
+    margin-left: 20px;
+    /* background: #fff;
+    border: 2px solid #fff; */
+    border-radius: 8px;
+}
+.first .first-content .center .center-content img{
+    width: 750px;
+    height: 400px;
+    border-radius: 8px;
+}
+
+.first .first-content .right .right1{
+    width: 250px;
+    height: 170px;
+    margin-left: 20px;
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+
+}
+.first .first-content .right .right1 .help{
+    display: flex;
+    margin-top: 15px;
+}
+.first .first-content .right .right1 .help:hover{
+    cursor: pointer;
+}
+.first .first-content .right .right1 .help img{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 15px;
+
+}
+.first .first-content .right .right1 .help p{
+    color: rgb(117, 116, 116);
+}
+.first .first-content .right .right2{
+    width: 250px;
+    height: 210px;
+    margin-left: 20px;
+    margin-top: 20px;
+    /* background: #fff;
+    border: 2px solid #fff; */
+    border-radius: 8px;
+
+}
+.first .first-content .right .right2 img{
+    width: 250px;
+    height: 210px;
+    border: 0px solid ;
+    border-radius: 8px;
+}
+
+.first .first-content2{
+    margin-top: 20px;
+    display: flex;
+    margin-left: 50px;
+}
+.first .first-content2 .button{
+    height: 40px;
+    width: 300px;
+    margin-right: 13px;
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    align-items: center;
+    display: flex;
+}
+.first .first-content2 .button img{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 8px;
+}
+.first .first-content2 .button:hover{
+    cursor: pointer;
+}
+.first .first-content2 .button h3{
+    margin-top: 7px;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* flash sales styling start */
+
+.first .flash-sales .flash-sales-top{
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 1240px;
+    height: 45px;
+    background: red;
+    border: 2px solid red;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.first .flash-sales .flash-sales-top i{
+    margin-left: 90px;
+    margin-top: 8px;
+    font-size: 25px;
+   
+}
+.first .flash-sales .flash-sales-top p{
+    margin-left: -850px;
+    margin-top: 3px;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+.first .flash-sales .flash-sales-top a{
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-top: 6px;
+    margin-right: 40px;
+}
+.first .flash-sales .flash-sales-top a i{
+    margin-top: 5px;
+    margin-left: 8px;
+    font-size: 18px;
+}
+.first .flash-sales .flash-sales-content{
+    margin-left: 50px;
+    width: 1240px;
+    height: 300px;
+    background: rgb(231, 225, 225);
+    border: 2px solid rgb(231, 225, 225);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+
+}
+
+.first .flash-sales .flash-sales-content .item{
+    /* margin-left: 2px; */
+    width: 206px;
+    height: 290px;
+    background: #fff;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+.first .flash-sales .flash-sales-content .item:hover{
+    transform: scale(0.9);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.first .flash-sales .flash-sales-content .item img{
+    width: 202px;
+    height: 160px;
+}
+.first .flash-sales .flash-sales-content .item .text{
+    margin-left: 15px;
+
+}
+.first .flash-sales .flash-sales-content .item .text .text-content h4{
+    color: rgb(100, 99, 99);
+    font-family:sans-serif;
+    margin-top: 8px;
+}
+.first .flash-sales .flash-sales-content .item .text .text-content .current{
+    margin-top: 5px;
+    font-size: 23px;
+    font-weight: 600;
+}
+.first .flash-sales .flash-sales-content .item .text .text-content .previous{
+    color: rgb(117, 116, 116);
+    font-size: 15px;
+}
+.first .flash-sales .flash-sales-content .item .text .add-cart{
+    margin-top:-20px;
+}
+.first .flash-sales .flash-sales-content .item .text .add-cart a{
+    text-decoration: none;
+    margin-left: 120px;
+
+    background: orange;
+    color: #fff;
+    border-radius: 5px;
+    font-family: cursive;
+    transition: all 0.3s ease;
+}
+.first .flash-sales .flash-sales-content .item .text .add-cart a:hover{
+    background: rgb(201, 132, 5);
+}
+.first .flash-sales .flash-sales-content .item .items-left{
+    margin-top: 8px;
+    margin-left: 15px;
+}
+.first .flash-sales .flash-sales-content .item .items-left .bar .line{
+    height: 8px;
+    width: 90%;
+    background: lightgrey;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    margin-top: 5px;
+    position: relative;
+}
+.first .flash-sales .flash-sales-content .item .items-left .bar .line::before{
+    content: "";
+    background: orange;
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+}
+.first .flash-sales .flash-sales-content .item .items-left .bar .item1::before{
+    width: 70%;
+}
+.first .flash-sales .flash-sales-content .item .items-left .bar .item2::before{
+    width: 50%;
+}
+.first .flash-sales .flash-sales-content .item .items-left .bar .item3::before{
+    width: 90%;
+}
+.first .flash-sales .flash-sales-content .item .items-left .bar .item4::before{
+    width: 40%;
+}
+.first .flash-sales .flash-sales-content .item .items-left .bar .item5::before{
+    width: 55%;
+}
+.first .flash-sales .flash-sales-content .item .items-left .bar .item6::before{
+    width: 73%;
+}

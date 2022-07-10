@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Log in</title>
+{% endblock %}
+
+{% block body %}
+    <!-- log in start -->
+    <section class="base" id="base">
+        <div class="base-content">
+
+            <div class="form">
+                <h3>Database Admin</h3>
+                <hr class="first">
+                <form method="POST">
+                    {{ form.hidden_tag() }}
+                    <div class="password"><h4>Password </h4>{{ form.password() }}<hr></div>
+                    <div class="buttons">
+                        {{ form.submit()}}
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}

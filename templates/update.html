@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Update</title>
+{% endblock %}
+
+{% block body %}
+
+<div id="update" style="margin-left:50px;">
+  <h2>Update Item</h2>
+  <form action="/update/{{item.id}}" method="POST">
+
+    <input type="text" name="name" id="name" value="{{item.name}}">
+    <input type="number" name="current_price" id="current_price" value="{{item.current_price}}">
+    <input type="number" name="previous_price" id="previous_price" value="{{item.previous_price}}">
+    <input type="number" name="remaining" id="remaining" value="{{item.remaining}}">
+    <input type="submit" value="update item">
+
+  </form>
+</div>
+
+{% endblock %}
+

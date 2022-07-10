@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Customers</title>
+{% endblock %}
+
+{% block body %}
+
+{% if customers | length <1 %}
+<h2 style="margin-left:50px;">You have no customers</h2>
+{% else %}
+<div id="table" style="margin-left:50px;">
+    <h2>Customers</h2>
+    <table style="margin-top:20px;" border="1" cellpadding="10" cellspacing="0" width="500" >
+
+
+        <tr>
+            <th>Email</th>
+            <th>User Name</th>
+            <th>Date Joined</th>
+            <th>Action</th>
+        </tr>
+        {% for customer in customers %}
+        <tr>
+            <td>{{customer.email}}</td>
+            <td>{{customer.username}}</td>
+            <td>{{customer.date_joined.date()}}</td>
+            <td>
+                <a href="/removecustomer/{{customer.id}}">Remove Customer</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+{% endif %}
+{% endblock %}
