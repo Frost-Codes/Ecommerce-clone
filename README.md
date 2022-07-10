@@ -1,4 +1,4 @@
-###🐱‍🏍✨Ecommerce Clone✨🐱‍🏍
+## 🐱‍🏍✨Ecommerce Clone✨🐱‍🏍
 
 🐍Python Project🐍
 
