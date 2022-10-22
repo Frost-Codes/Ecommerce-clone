@@ -66,7 +66,7 @@ class LogInForm(FlaskForm):
     submit = SubmitField('Log in')
 
 
-# Shop items clas
+# Shop items class
 class ShopItemsForm(FlaskForm):
     # picture = FileField(validators=[DataRequired()])
     name = StringField('Name of item', validators=[DataRequired()])
@@ -228,7 +228,8 @@ def database_update():
     form = LogInForm()
     if form.validate_on_submit():
         if check_password_hash(database_hash, form.password.data):
-            return redirect('/shopitems/')
+            flash('Admin log in')
+            return redirect('/')
         else:
             flash('Invalid password!!!!')
         form.password.data = ''
@@ -384,12 +385,12 @@ def pay():
             "TransactionDesc": "Confirm payment to Ian Limited"
         }
 
-        # response = requests.request("POST", 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest',
-        #                             headers=headers, data=payload)
+        response = requests.request("POST", 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest',
+                                    headers=headers, data=payload)
 
         print(payload.items())
         print(total)
-        # print(response.text.encode('utf8'))
+        print(response.text.encode('utf8'))
         return 'Thank you for shopping with us...Enter PIN to confirm payment'
 
 

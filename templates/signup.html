@@ -9,6 +9,15 @@
 {% block body %}
  <!-- sign up start -->
  <section class="base" id="base-signup">
+     {% for message in get_flashed_messages() %}
+
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
     <div class="base-content">
         <div class="form">
             <h3>Create an account<br>to shop</h3>
