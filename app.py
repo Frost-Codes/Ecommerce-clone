@@ -8,8 +8,24 @@ from flask_login import UserMixin, login_user, LoginManager, login_required, log
 from datetime import datetime
 from base64 import b64encode
 import requests
+import smtplib
 import time
 from time import sleep
+
+gmail_account = ''
+gmail_password = ''
+
+
+def send_mail(recipient):
+    try:
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(gmail_account, gmail_password)
+        server.sendmail(gmail_account, recipient, 'Congratulations for signing up!!!')
+        print('Sign up mail sent')
+    except:
+        print('Mail not sent')
+
 
 # Mpesa details
 SHORT_CODE = 174379
@@ -171,6 +187,7 @@ def signup():
             try:
                 db.session.add(new_customer)
                 db.session.commit()
+                send_mail(new_customer.email)
                 flash('Account created successfully', category='success')
                 return redirect('/')
             except:
